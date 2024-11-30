@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import CoffeeCard from "./CoffeeCard";
 import { useState } from "react";
+import Navbar from "./Navbar";
 
 
 const Router = () => {
@@ -9,6 +10,9 @@ const Router = () => {
 
     return (
         <div className="max-w-7xl mx-auto">
+            <div>
+                <Navbar></Navbar>
+            </div>
             <h2>Hot and cold coffee: {coffees.length}</h2>
             <div className="grid grid-cols-2 justify-center items-center gap-8">
                 {
