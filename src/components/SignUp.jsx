@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
+import Navbar from "./Navbar";
 
 
 const SignUp = () => {
@@ -17,7 +18,7 @@ const SignUp = () => {
             const newUser = {name, email}
 
             // save new user info to the database
-            fetch('http://localhost:5000/users', {
+            fetch('https://coffee-store-server-lemon-two.vercel.app/users', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -37,6 +38,7 @@ const SignUp = () => {
     }
     return (
         <div>
+            <Navbar></Navbar>
             <div className="hero bg-base-200 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">

@@ -19,14 +19,10 @@ const Users = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                // Swal.fire({
-                //     title: "Deleted!",
-                //     text: "Your file has been deleted.",
-                //     icon: "success"
-                // });
+                
 
                 // delete from the database
-                fetch(`http://localhost:5000/users/${id}`, {
+                fetch(`https://coffee-store-server-lemon-two.vercel.app/users/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
